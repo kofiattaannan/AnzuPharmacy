@@ -1,0 +1,34 @@
+<svg width="240" height="240" viewBox="0 0 240 240" xmlns="http://www.w3.org/2000/svg">
+  <defs>
+    <!-- 和色：杏色系のグラデーション -->
+    <linearGradient id="apricotGrad" x1="0%" y1="0%" x2="0%" y2="100%">
+      <stop offset="0%" stop-color="#f7b37b"/>
+      <stop offset="100%" stop-color="#e48a4c"/>
+    </linearGradient>
+    <!-- 葉のグラデーション -->
+    <linearGradient id="leafGrad" x1="0%" y1="0%" x2="0%" y2="100%">
+      <stop offset="0%" stop-color="#7cb874"/>
+      <stop offset="100%" stop-color="#4f8a4a"/>
+    </linearGradient>
+  </defs>
+
+  <!-- 杏の実 -->
+  <circle cx="120" cy="120" r="60" fill="url(#apricotGrad)" stroke="#9b5a3c" stroke-width="4"/>
+
+  <!-- 杏の縦ライン（特徴づけ） -->
+  <path d="M120 65 C135 110 135 130 120 175" 
+        stroke="#9b5a3c" stroke-width="3" fill="none" stroke-linecap="round"/>
+
+  <!-- 葉 -->
+  <ellipse cx="165" cy="70" rx="28" ry="16" 
+           fill="url(#leafGrad)" stroke="#3d6b38" stroke-width="3" />
+
+  <!-- 漢方の「漢」モチーフを円形の下に組み合わせ（抽象記号風） -->
+  <path d="M60 190 H180 M120 160 V220" 
+        stroke="#5c3d2e" stroke-width="5" stroke-linecap="round"/>
+
+  <!-- 店名や「漢方」入れられるようにガイド -->
+  <!-- <text x="120" y="225" text-anchor="middle" font-family="serif" font-size="22">
+      ○○漢方薬局
+    </text> -->
+</svg>
