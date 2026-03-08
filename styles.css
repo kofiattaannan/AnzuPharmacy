@@ -172,7 +172,14 @@ input:focus,textarea:focus{border-color:var(--accent); outline:none}
   .hero-media img{height:40vh}
 }
 @media (max-width:560px){
-  .nav{display:none}
+  .nav{
+    display:none; flex-direction:column; gap:4px;
+    position:absolute; top:100%; left:0; right:0;
+    background:rgba(247,243,234,0.97); border-bottom:1px solid var(--line);
+    padding:12px 20px;
+  }
+  .nav.open{display:flex}
+  .nav a{margin-left:0}
   .menu-toggle{display:block}
   .hero{min-height:60vh}
   .hero-content{margin-top:-40px; padding:18px}

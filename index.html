@@ -10,6 +10,7 @@
   <!-- 明朝・ゴシックの落ち着いた組み合わせ -->
   <link href="./漢方薬局｜心と体をやさしく整える_files/css2" rel="stylesheet">
   <link rel="stylesheet" href="styles.css">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
 </head>
 <body>
   <header class="site-header">
@@ -18,6 +19,7 @@
         <img src="./assets/logo.svg" alt="漢方薬局ロゴ" class="logo">
         <span class="brand-text">尽心堂あんず薬局</span>
       </a>
+      <button class="menu-toggle" aria-label="メニューを開く" aria-expanded="false">&#9776;</button>
       <nav class="nav">
         <a href="#about">はじめての方へ</a>
         <a href="#services">ご提供内容</a>
@@ -128,8 +130,7 @@
         <div class="reserve-content">
           <h2>ご相談予約</h2>
           <p>はじめての方もお気軽に。ご希望の日時とご相談内容をお電話にてお知らせください。</p>
-          <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
-          <a href="tel:0123456789"><i class="fa-solid fa-phone"></i> 06-6992-2488</a>
+          <a href="tel:0669922488"><i class="fa-solid fa-phone"></i> 06-6992-2488</a>
         </div>
       </div>
     </section>
@@ -142,10 +143,10 @@
       </div>
       <div class="grid two">
         <div class="map-frame">
-            <iframe 
-              src="https://www.google.com/maps/embed?pb=!1m28!1m12!1m3!1d1159.2295715165492!2d135.56610306709445!3d34.73552698871913!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!4m13!3e2!4m5!1s0x6000e19e7d042aed%3A0xab11553e5ca2b34!2z5a6I5Y-j5biC6aeF44CB44CSNTcwLTAwNTYg5aSn6Ziq5bqc5a6I5Y-j5biC5a-65YaF55S677yS5LiB55uu77yR!3m2!1d34.7353673!2d135.565158!4m5!1s0x6000e10817b4924f%3A0xd2ef5b881cd6896a!2z44CSNTcwLTAwMzgg5aSn6Ziq5bqc5a6I5Y-j5biC5rKz5Y6f55S677yX4oiS77yZIOa8ouaWueWwj-ael-ebm-Wkp-WggiDmqKrlsbHolqzlsYA!3m2!1d34.7355678!2d135.5682589!5e0!3m2!1sja!2sjp!4v1764833807250!5m2!1sja!2sjp" width="600" height="450" style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade" width="600" height="450" style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade" 
-              width="600" height="450" style="border:0;" 
-              allowfullscreen="" loading="lazy" 
+            <iframe
+              src="https://www.google.com/maps/embed?pb=!1m28!1m12!1m3!1d1159.2295715165492!2d135.56610306709445!3d34.73552698871913!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!4m13!3e2!4m5!1s0x6000e19e7d042aed%3A0xab11553e5ca2b34!2z5a6I5Y-j5biC6aeF44CB44CSNTcwLTAwNTYg5aSn6Ziq5bqc5a6I5Y-j5biC5a-65YaF55S677yS5LiB55uu77yR!3m2!1d34.7353673!2d135.565158!4m5!1s0x6000e10817b4924f%3A0xd2ef5b881cd6896a!2z44CSNTcwLTAwMzgg5aSn6Ziq5bqc5a6I5Y-j5biC5rKz5Y6f55S677yX4oiS77yZIOa8ouaWueWwj-ael-ebm-Wkp-WggiDmqKrlsbHolqzlsYA!3m2!1d34.7355678!2d135.5682589!5e0!3m2!1sja!2sjp!4v1764833807250!5m2!1sja!2sjp"
+              width="600" height="450" style="border:0;"
+              allowfullscreen="" loading="lazy"
               referrerpolicy="no-referrer-when-downgrade">
             </iframe>
             <p>店舗前には、普通車が一台駐車いただけるスペースがございます。</p>
@@ -183,4 +184,18 @@
     </div>
   </footer>
 
+<script>
+  const toggle = document.querySelector('.menu-toggle');
+  const nav = document.querySelector('.nav');
+  toggle.addEventListener('click', () => {
+    const open = nav.classList.toggle('open');
+    toggle.setAttribute('aria-expanded', open);
+  });
+  nav.querySelectorAll('a').forEach(a => {
+    a.addEventListener('click', () => {
+      nav.classList.remove('open');
+      toggle.setAttribute('aria-expanded', 'false');
+    });
+  });
+</script>
 </body></html>
